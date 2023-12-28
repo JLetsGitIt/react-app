@@ -1,0 +1,298 @@
+/* .e10_483 { 
+	background-color:rgba(255, 255, 255, 1);
+	width:1512px;
+	height:982px;
+	position:absolute;
+	overflow:hidden;
+} */
+.e10_484 { 
+	background-color:rgba(238.1785762310028, 239.80713844299316, 242.24999696016312, 1);
+	width:100%;
+	height:13%;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.e10_485 { 
+	width:233px;
+	height:48.09090805053711px;
+	position:absolute;
+	left:36px;
+	top:32px;
+}
+.e10_486 { 
+	width:46px;
+	height:48px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-image: url(./star.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e10_487 { 
+	color:rgba(0, 87.20000088214874, 218.00000220537186, 1);
+	width:126px;
+	height:31px;
+	position:absolute;
+	left:60px;
+	top:8px;
+	font-family:Manrope 1.25 Major Third;
+	text-align:left;
+	font-size:23.040000915527344px;
+	letter-spacing:0;
+	font-weight:Extrabold;
+}
+.e10_488 { 
+	width:525px;
+	height:381px;
+	position:absolute;
+	left:34vw;
+	top:311px;
+}
+.e10_489 { 
+	color:rgba(39.48406130075455, 43.43246743083, 78.9681226015091, 1);
+	width:490px;
+	height:43px;
+	position:absolute;
+	left:16px;
+	top:0px;
+	font-family:Manrope 1.25 Major Third;
+	text-align:left;
+	font-size:33.18px;
+	letter-spacing:0;
+	font-weight:Extrabold;
+}
+.e10_490 { 
+	width:525px;
+	height:296px;
+	position:absolute;
+	left:0px;
+	top:85px;
+}
+/* .e10_491 { 
+	width:525px;
+	height:200px;
+	position:absolute;
+	left:0px;
+	top:0px;
+} */
+/* .e10_492 { 
+	width:525px;
+	height:88px;
+	position:absolute;
+	left:0px;
+	top:0px;
+} */
+/* .address_txt_pos { 
+	width:493px;
+	height:24px;
+	position:absolute;
+	left:16px;
+	top:0px;
+} */
+/* .ei10_492_79533_138235_79509_127359 { 
+	width:493px;
+	height:24px;
+	position:absolute;
+	left:0px;
+	top:0px;
+} */
+.address_txt { 
+	color:rgba(39.48406130075455, 43.43246743083, 78.9681226015091, 1);
+	width:493px;
+	height:24px;
+	position:absolute;
+	left:16px;
+	top:0px;
+	font-family:Manrope 1.25 Major Third;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+	font-weight:600;
+}
+.ca-input1_0 { 
+	background-color:rgba(238.1785762310028, 239.80713844299316, 242.24999696016312, 1);
+	width:493px;
+	height:56px;
+	position:absolute;
+	left:15px;
+	top:50px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+	text-indent: 10px;
+}
+/* .ca-input1_1 { 
+	width:477px;
+	height:28px;
+	position:absolute;
+	left:8px;
+	top:14px;
+} */
+.ca-input_txt { 
+	color:rgba(124.9499948322773, 126.22500121593475, 127.5, 1);
+	width:477px;
+	height:50px;
+	position:absolute;
+	left:0px;
+	top:30px;
+	font-family:Manrope 1.25 Major Third;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+	line-height:px;
+	border: 0;
+}
+.ca-input2_0 { 
+	width:525px;
+	height:88px;
+	position:absolute;
+	left:0px;
+	top:150px;
+}
+/* .e10_495 { 
+	width:493px;
+	height:24px;
+	position:absolute;
+	left:16px;
+	top:0px;
+} */
+/* .ei10_495_79509_127359 { 
+	width:493px;
+	height:24px;
+	position:absolute;
+	left:0px;
+	top:0px;
+} */
+.password_txt { 
+	color:rgba(39.48406130075455, 43.43246743083, 78.9681226015091, 1);
+	width:493px;
+	height:24px;
+	position:absolute;
+	left:16px;
+	top:110px;
+	font-family:Manrope 1.25 Major Third;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+	line-height:px;
+	font-weight:600;
+}
+.ca-input2_1 { 
+	background-color:rgba(238.1785762310028, 239.80713844299316, 242.24999696016312, 1);
+	width:493px;
+	height:56px;
+	position:absolute;
+	left:16px;
+	top:62px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+	text-indent: 10px;
+}
+.ca-input2_2 { 
+	width:477px;
+	height:56px;
+	position:absolute;
+	left:0px;
+	top:30px;
+}
+/* .eca-input2_3 { 
+	color:rgba(124.9499948322773, 126.22500121593475, 127.5, 1);
+	width:461px;
+	height:28px;
+	position:absolute;
+	left:8px;
+	top:0px;
+	font-family:Manrope;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+	line-height:px;
+} */
+.ca-button { 
+	background-color:rgba(0, 87.20000088214874, 218.00000220537186, 1);
+	width:490px;
+	height:56px;
+	position:absolute;
+	left:17.5px;
+	top:240px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+}
+.ca-button_txt { 
+	color:rgba(238.1785762310028, 239.80713844299316, 242.24999696016312, 1);
+	width:114px;
+	height:26px;
+	position:absolute;
+	left:188px;
+	top:15px;
+	font-family:Manrope 1.25 Major Third;
+	text-align:center;
+	font-size:19.200000762939453px;
+	letter-spacing:0;
+	font-weight:Extrabold;
+}
+.ca_img1 { 
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:150px;
+	top:400px;
+	background-image: url(./crowdfunding-1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.ca_img2 { 
+	width:200px;
+	height:200px;
+	position:absolute;
+	right:150px;
+	top:200px;
+	background-image: url(./crowdfunding-2.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.ca_img3 { 
+	width:300px;
+	height:200px;
+	position:absolute;
+	right:100px;
+	bottom:100px;
+	background-image: url(./crowdfunding-3.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.bounce {
+	animation: bounce 0.5s infinite alternate;
+  }
+  
+@keyframes bounce {
+	to {
+		transform: translateY(-10px);
+	}
+}
+
+.scale-up {
+	transform: scale(1);
+	transition: transform 0.3s ease-in-out;
+}
+
+.scale-up:hover {
+	transform: scale(1.1);
+}
+
+.e10_704:hover {
+	text-decoration: underline;
+}
+
+  
+.e10_729:hover {
+	text-decoration: underline;
+}
