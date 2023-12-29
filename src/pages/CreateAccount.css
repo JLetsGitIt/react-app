@@ -12,6 +12,7 @@
 	position:absolute;
 	left:0px;
 	top:0px;
+	display:block;
 }
 .e10_485 { 
 	width:233px;
@@ -247,6 +248,7 @@
 	background-image: url(./crowdfunding-1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
+	display:block;
 }
 .ca_img2 { 
 	width:200px;
@@ -257,6 +259,7 @@
 	background-image: url(./crowdfunding-2.png);
 	background-repeat:no-repeat;
 	background-size:cover;
+	display:block;
 }
 .ca_img3 { 
 	width:300px;
@@ -267,6 +270,7 @@
 	background-image: url(./crowdfunding-3.png);
 	background-repeat:no-repeat;
 	background-size:cover;
+	display:block;
 }
 
 .bounce {
@@ -296,3 +300,25 @@
 .e10_729:hover {
 	text-decoration: underline;
 }
+
+@media only screen and (max-width: 600px) {
+	.ca_img1 {
+		display:none;
+	}
+	.ca_img2 {
+		display:none;
+	}
+	.ca_img3 {
+		display:none;
+	}
+	.e10_484 {
+		display:none;
+	}
+	.e10_488 { 
+		left:10vw;
+	}
+	.container {
+	  width: 100%;    /* Make the container full-width */
+	  padding: 10px;  /* Add some padding for spacing */
+	}
+  }

@@ -738,3 +738,38 @@ hr.e10_686 {
 	width: 80%; 
 	margin: 0 auto;
 }
+.fi_interests {
+	position: absolute;
+	left: 80%;
+	transform: translate(-50%, -50%) translateX(10vw);
+	top: 1.5%;
+}
+@media only screen and (max-width: 600px) {
+	.container {
+	  width: 100%;    /* Make the container full-width */
+	  padding: 10px;  /* Add some padding for spacing */
+	}
+	.fi_header {
+		display:none;
+	}
+	.mid_line {
+		top:100vh;
+		left:5vw;
+		display:none;
+	}
+	.fi_interests {
+		left: 140vw;
+		top: 110vh;
+		width: 100vw;
+		height: 100vh;
+	}
+	.e10_718 {
+		width: 145%;
+		text-align:center;
+		top:10vh;
+	}
+	.e10_699 {
+		top:30vh;
+		left: 65vw;
+	}
+  }

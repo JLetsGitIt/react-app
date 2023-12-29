@@ -3,16 +3,23 @@ import "./CreateAccount.css";
 import { useNavigate } from "react-router-dom";
 import SignUpForm from "./components/Form";
 
-interface Props {
-  // Define the type for GlobalState if needed
-  GlobalState: any; // Replace 'any' with the actual type of GlobalState
+interface GlobalState {
+  viewportWidth: number;
+  setViewportWidth: React.Dispatch<React.SetStateAction<number>>;
+  dynamicLength: number;
+  setDynamicLength: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function CreateAccount({ GlobalState }: Props) {
+interface CreateAccountProps {
+  GlobalState: GlobalState;
+}
+
+function CreateAccount({ GlobalState }: CreateAccountProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const {} = GlobalState;
+  const { viewportWidth, setViewportWidth, dynamicLength, setDynamicLength } =
+    GlobalState;
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -31,6 +38,7 @@ function CreateAccount({ GlobalState }: Props) {
 
   return (
     <div className="e10_483">
+      // header
       <div className="e10_484"></div>
       <div className="e10_485">
         <div className="e10_486"></div>
@@ -38,9 +46,11 @@ function CreateAccount({ GlobalState }: Props) {
           <div className="e10_487">Compound</div>
         </h2>
       </div>
+      // images
       <div className="ca_img1 bounce"></div>
       <div className="ca_img2 bounce"></div>
       <div className="ca_img3 bounce"></div>
+      // sign up form
       <div className="e10_488">
         <h2>
           <span className="e10_489">Your start to financial literacy.</span>

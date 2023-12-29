@@ -252,4 +252,16 @@ hr.e10_732 {
 	right: 10px;
 	cursor: pointer;
   }
-  
+
+  @media only screen and (max-width: 600px) {
+	.container {
+	  width: 100%;    /* Make the container full-width */
+	  padding: 10px;  /* Add some padding for spacing */
+	}
+	.oc_header {
+		display:none;
+	}
+	.e10_742 {
+		left:70vw;
+	}
+  }

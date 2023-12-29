@@ -7,11 +7,18 @@ import FinancialInterestsSection from "./components/ListGroup";
 import DropDown from "./components/DropDown";
 import RadioGroup from "./components/RadioGroup";
 
-interface HTMLElement {
-  matches?(selectors: string): boolean;
+interface GlobalState {
+  viewportWidth: number;
+  setViewportWidth: React.Dispatch<React.SetStateAction<number>>;
+  dynamicLength: number;
+  setDynamicLength: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function FinancialInfo() {
+interface FinancialInfoProps {
+  GlobalState: GlobalState;
+}
+
+function FinancialInfo({ GlobalState }: FinancialInfoProps) {
   const [selectedOption, setSelectedOption] = useState("Select");
   let status = [
     "Single",
@@ -32,6 +39,7 @@ function FinancialInfo() {
   const [isActive8, setIsActive8] = useState(false);
   const navigate = useNavigate();
 
+  // displays the dropdown selection
   const dropFunction = () => {
     const dropdown = document.getElementById("myDropdown");
     if (dropdown) {
@@ -39,6 +47,7 @@ function FinancialInfo() {
     }
   };
 
+  // sets the selection option to the clicked one and displays it
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
     const dropdown = document.getElementById("myDropdown");
@@ -47,6 +56,7 @@ function FinancialInfo() {
     }
   };
 
+  // returns the style of the radio button based on the index/selection
   const handleRadioClick = (index: number) => {
     let className = "";
     if (index === 0) {
@@ -62,6 +72,7 @@ function FinancialInfo() {
     return className;
   };
 
+  // sets the selected button to active
   const handleClick = (buttonNumber: number) => {
     if (buttonNumber === 1) {
       setIsActive1(!isActive1);
@@ -82,13 +93,16 @@ function FinancialInfo() {
     }
   };
 
+  //navigates to the onboarding complete page
   const handleNextPage = (e: MouseEvent) => {
     e.preventDefault();
     navigate("/onboarding-complete");
   };
 
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-  const [dynamicLength, setDynamicLength] = useState(0.37 * viewportWidth);
+  const { viewportWidth, setViewportWidth, dynamicLength, setDynamicLength } =
+    GlobalState;
+  // const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  // const [dynamicLength, setDynamicLength] = useState(0.37 * viewportWidth);
 
   useEffect(() => {
     const handleResize = () => {
@@ -106,52 +120,46 @@ function FinancialInfo() {
 
   return (
     <div className="e10_684">
-      <div className="e10_685"></div>
-      <hr style={{ width: `${dynamicLength}px` }} className="e10_686"></hr>
-      <div className="e10_687">
-        {/* <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="45%" height="100%" viewBox="0 0 659 522" enableBackground="new 0 0 659 522" preserveAspectRatio="none">
-        <path className="path" width="80%" height="100%" fill="none" stroke="rgba(124.95, 126.2, 127.5, 1)" strokeWidth="50" strokeDasharray="10,10"   d="M5 7 l555 0"  strokeDashoffset="2342" />
-      </svg> */}
-        {/* <div className="path_style">
+      // header
+      <div className="fi_header">
+        <div className="e10_685"></div>
+        <hr style={{ width: `${dynamicLength}px` }} className="e10_686"></hr>
+        <div className="e10_687">
           <svg height="80" width="100%">
-            <g fill="none" stroke="rgba(124.95, 126.2, 127.5, 1)" strokeWidth="2">
-              <path strokeDasharray="10,10" d="M5 7 l{window.innerWidth} 0" />
+            <g
+              fill="none"
+              stroke="rgba(124.95, 126.2, 127.5, 1)"
+              stroke-width="2"
+            >
+              <path stroke-dasharray="10,10" d={`M5 7 l${dynamicLength} 0`} />
             </g>
           </svg>
-        </div> */}
-        <svg height="80" width="100%">
-          <g
-            fill="none"
-            stroke="rgba(124.95, 126.2, 127.5, 1)"
-            stroke-width="2"
-          >
-            <path stroke-dasharray="10,10" d={`M5 7 l${dynamicLength} 0`} />
-          </g>
-        </svg>
-      </div>
-      <div className="fi-img"></div>
-      <div className="e10_688">
-        <h1>
-          <span className="ei10_688_0">1</span>
-        </h1>
-      </div>
-      <h1>
-        <span className="e10_689">Register</span>
-      </h1>
-      <h1>
-        <span className="e10_690">Add Your Financial Info</span>
-      </h1>
-      <div className="e10_691">
-        <div className="e10_692"></div>
-        <div className="e10_693">
+        </div>
+        <div className="fi-img"></div>
+        <div className="e10_688">
           <h1>
-            <span className="ei10_693_0">2</span>
+            <span className="ei10_688_0">1</span>
           </h1>
         </div>
+        <h1>
+          <span className="e10_689">Register</span>
+        </h1>
+        <h1>
+          <span className="e10_690">Add Your Financial Info</span>
+        </h1>
+        <div className="e10_691">
+          <div className="e10_692"></div>
+          <div className="e10_693">
+            <h1>
+              <span className="ei10_693_0">2</span>
+            </h1>
+          </div>
+        </div>
+        <h1>
+          <span className="e10_694">Earn Your Badge!</span>
+        </h1>
       </div>
-      <h1>
-        <span className="e10_694">Earn Your Badge!</span>
-      </h1>
+      // financial interests section
       <div
         style={{
           height: "1px",
@@ -164,12 +172,13 @@ function FinancialInfo() {
         <div className="mid_line" style={{ position: "relative" }}></div>
 
         <div
-          style={{
-            position: "absolute",
-            left: "80%",
-            transform: "translate(-50%, -50%) translateX(10vw)",
-            top: "1.5%",
-          }}
+          // style={{
+          //   position: "absolute",
+          //   left: "80%",
+          //   transform: "translate(-50%, -50%) translateX(10vw)",
+          //   top: "1.5%",
+          // }}
+          className="fi_interests"
         >
           <FinancialInterestsSection
             handleClick={handleClick}
@@ -184,12 +193,13 @@ function FinancialInfo() {
           />
         </div>
       </div>
-
+      // next button
       <button className="e10_699" onClick={(event) => handleNextPage(event)}>
         <h3>
           <span className="e10_700">Next</span>
         </h3>
       </button>
+      //heading
       <h1>
         <span className="e10_718">
           Tell us a little more about your financial personality
@@ -201,42 +211,25 @@ function FinancialInfo() {
           <div className="ei10_719_626_10214_1337_2542"></div>
         </div>
       </div> */}
-
+      //dropdown
       <DropDown
         dropFunction={dropFunction}
         selectedOption={selectedOption}
         handleOptionClick={handleOptionClick}
       />
-
       <p>
         <span className="e10_720">Income</span>
       </p>
+      // radio group
       <span className="e10_721">Relationship Status</span>
       {/* <span className="e10_725">Single</span>
       <span className="e10_726">Married, filing taxes together</span>
       <span className="e10_727">Married, filing taxes separately</span> */}
-
       <RadioGroup
         status={status}
         handleRadioClick={handleRadioClick}
         setSelectedIndex={setSelectedIndex}
       />
-
-      {/* {status.length === 0 && <p>No item found</p>}
-      <ul id="myRadio">
-        {status.map((item, index) => (
-          <li
-            className={handleRadioClick(index)}
-            key={item}
-            onClick={() => {
-              setSelectedIndex(index);
-            }}
-          >
-            <span className="e10_725">{item}</span>
-          </li>
-        ))}
-      </ul> */}
-
       <div className="e10_728">
         <h1>
           <span className="ei10_728_0">1</span>
